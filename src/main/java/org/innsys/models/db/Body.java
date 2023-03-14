@@ -11,22 +11,11 @@ public class Body {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
-    @Column(name = "account_number")
-    private String accountNumber;
 
 
     @OneToOne(cascade = CascadeType.ALL)
     private Headers headers;
 
-
-    public Body setAccountNumber(String accountNumber) {
-        this.accountNumber = accountNumber;
-        return this;
-    }
-
-    public String getAccountNumber() {
-        return accountNumber;
-    }
 
     public Long getId() {
         return id;

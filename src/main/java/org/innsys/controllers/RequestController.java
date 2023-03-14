@@ -1,10 +1,11 @@
 package org.innsys.controllers;
 
-import org.innsys.models.db.Body;
+
 import org.innsys.models.helper.AccountRequest;
 import org.innsys.models.helper.Request;
 import org.innsys.models.helper.ResponseUtil;
 import org.innsys.services.impl.RequestServiceImpl;
+
 
 import javax.inject.Inject;
 import javax.ws.rs.*;
@@ -21,7 +22,7 @@ public class RequestController {
     @Path("/get-all-functions")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public ResponseUtil<Body> getAllUserFunctions(Request request) {
+    public ResponseUtil<org.innsys.models.helper.Response> getAllUserFunctions(Request request) {
         return requestService.saveAllUserRequest(request);
     }
 
